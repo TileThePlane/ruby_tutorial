@@ -1,22 +1,17 @@
-class Phrase
-	attr_accessor :content
-
-	def initialize(content)
-		@content = content
-	end
+class Phrase < String
 
 	def palindrome?
-		processed_content = self.content.downcase
+		processed_content = self.downcase
 		processed_content == processed_content.reverse
 	end
 
 	def louder
-		self.content.upcase
+		self.upcase
 	end
 end
 
 phrase = Phrase.new("Racecar")
-puts phrase.content
+puts phrase
 puts phrase.palindrome?
 puts phrase.louder
 
