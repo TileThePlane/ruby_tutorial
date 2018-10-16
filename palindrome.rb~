@@ -33,6 +33,6 @@ puts phrase.palindrome?
 puts phrase.louder
 
 frase = TranslatedPhrase.new("Recognize","Reconocer")
-frase.palindrome?
+puts frase.palindrome?
 
 

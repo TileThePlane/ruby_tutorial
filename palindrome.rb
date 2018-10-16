@@ -1,7 +1,11 @@
 class Phrase < String
 
+	def processor(str)
+		str.downcase
+	end
+
 	def processed_content
-		self.downcase
+		processor(self)
 	end
 	
 	def palindrome?
@@ -23,7 +27,7 @@ class TranslatedPhrase < Phrase
 	end
 
 	def processed_content
-		self.translation.downcase
+		processor(self.translation)
 	end
 end
 
