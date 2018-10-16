@@ -9,4 +9,4 @@ sandwich do
 end
 
 
-99.downto(0) { |i| puts i.to_s + " bottles of beer on the wall."}
+99.downto(0) { |i| i + " bottles of beer on the wall."}
