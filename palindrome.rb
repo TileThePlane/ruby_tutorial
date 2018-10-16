@@ -1,3 +1,16 @@
+module Palindrome
+
+	def palindrome?
+		processed_content = processed_content.reverse
+	end
+
+	private
+		
+		def processed_content
+			self.to_s.downcase
+		end
+end
+
 class Phrase < String
 
 	def processor(str)
@@ -29,6 +42,14 @@ class TranslatedPhrase < Phrase
 	def processed_content
 		processor(self.translation)
 	end
+end
+
+class String
+	include Palindrome
+end
+
+class Integer 
+	include Palindrome
 end
 
 phrase = Phrase.new("Racecar")
