@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+load "./palindrome"
+
+lines = File.readlines("phrases.txt")
+lines.each do |line|
+	if line.palindrome?
+		puts "palindrome detacted: #{line}"
+	end
+end
+
+palindromes = lines.select(&:palindrome?)
+File.write('palindromes_file.txt', palindromes.join)
